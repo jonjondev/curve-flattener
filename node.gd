@@ -19,7 +19,6 @@ func infect():
 	infected = true
 	$Sprite.modulate = Color(1, 0, 0)
 	add_to_group("infected")
-	Stats.report_new_infection()
 	
 
 func infect_other(other):

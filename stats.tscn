@@ -17,3 +17,6 @@ text = "Current Infections: "
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true

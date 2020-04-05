@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://node.tscn" type="PackedScene" id=1]
-[ext_resource path="res://stats.tscn" type="PackedScene" id=2]
+[ext_resource path="res://stats.gd" type="Script" id=2]
+[ext_resource path="res://stats.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 209.895, 10 )
@@ -70,4 +71,36 @@ position = Vector2( 198.635, 358.081 )
 [node name="Node10" parent="." instance=ExtResource( 1 )]
 position = Vector2( 112.957, 331.187 )
 
-[node name="Stats" parent="." instance=ExtResource( 2 )]
+[node name="Node20" parent="." instance=ExtResource( 1 )]
+position = Vector2( 157.525, 192.872 )
+
+[node name="Node19" parent="." instance=ExtResource( 1 )]
+position = Vector2( 272.403, 262.414 )
+
+[node name="Node18" parent="." instance=ExtResource( 1 )]
+position = Vector2( 178.272, 283.161 )
+
+[node name="Node17" parent="." instance=ExtResource( 1 )]
+position = Vector2( 313.513, 327.729 )
+
+[node name="Node16" parent="." instance=ExtResource( 1 )]
+position = Vector2( 378.828, 174.046 )
+
+[node name="Node15" parent="." instance=ExtResource( 1 )]
+position = Vector2( 284.698, 174.046 )
+
+[node name="Node14" parent="." instance=ExtResource( 1 )]
+position = Vector2( 394.965, 258.187 )
+
+[node name="Node13" parent="." instance=ExtResource( 1 )]
+position = Vector2( 396.502, 366.918 )
+infected = true
+
+[node name="Node12" parent="." instance=ExtResource( 1 )]
+position = Vector2( 198.635, 358.081 )
+
+[node name="Node11" parent="." instance=ExtResource( 1 )]
+position = Vector2( 112.957, 331.187 )
+
+[node name="Stats" parent="." instance=ExtResource( 3 )]
+script = ExtResource( 2 )
