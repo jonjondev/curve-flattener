@@ -1,0 +1,19 @@
+[gd_scene format=2]
+
+[node name="Stats" type="ColorRect"]
+margin_left = 601.743
+margin_top = 109.069
+margin_right = 1006.74
+margin_bottom = 426.069
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "Current Infections: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
