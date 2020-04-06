@@ -93,8 +93,7 @@ position = Vector2( 284.698, 174.046 )
 position = Vector2( 394.965, 258.187 )
 
 [node name="Node13" parent="." instance=ExtResource( 1 )]
-position = Vector2( 396.502, 366.918 )
-infected = true
+position = Vector2( 308.283, 375.289 )
 
 [node name="Node12" parent="." instance=ExtResource( 1 )]
 position = Vector2( 198.635, 358.081 )
@@ -103,4 +102,5 @@ position = Vector2( 198.635, 358.081 )
 position = Vector2( 112.957, 331.187 )
 
 [node name="Stats" parent="." instance=ExtResource( 3 )]
+anchor_right = 100.0
 script = ExtResource( 2 )

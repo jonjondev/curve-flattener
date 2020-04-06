@@ -25,7 +25,10 @@ func infect():
 		infected = true
 		$Sprite.modulate = Color(1, 0, 0)
 		add_to_group("infected")
-		get_tree().create_timer(rand_range(14, 42)).connect("timeout", self, "recover")
+		var recovery_time = rand_range(10, 18)
+		if rand_range(1, 5) > 5:
+			recovery_time = rand_range(21, 42)
+		get_tree().create_timer(recovery_time).connect("timeout", self, "recover")
 
 func recover():
 	infected = false
