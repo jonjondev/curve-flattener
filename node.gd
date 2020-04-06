@@ -3,9 +3,13 @@ extends RigidBody2D
 export (bool) var infected
 export (bool) var immune
 
+var is_severe_case = false
+
 func _ready():
 	$MoveTimer.connect("timeout", self, "initiate_movement")
 	connect("body_entered", self, "infect_other")
+	if rand_range(1, 5) > 5:
+		is_severe_case = true
 	if infected:
 		infect()
 
@@ -26,7 +30,7 @@ func infect():
 		$Sprite.modulate = Color(1, 0, 0)
 		add_to_group("infected")
 		var recovery_time = rand_range(10, 18)
-		if rand_range(1, 5) > 5:
+		if is_severe_case:
 			recovery_time = rand_range(21, 42)
 		get_tree().create_timer(recovery_time).connect("timeout", self, "recover")
 
