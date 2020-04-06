@@ -1,28 +1,40 @@
-extends RigidBody2D
+extends KinematicBody2D
+
+var speed = 100
+var direction
 
 export (bool) var infected
 export (bool) var immune
-
 var is_severe_case = false
 
 func _ready():
-	$MoveTimer.connect("timeout", self, "initiate_movement")
-	connect("body_entered", self, "infect_other")
+	direction = Vector2(rand_range(-1, 1), rand_range(-1, 1))
 	if rand_range(1, 5) > 5:
 		is_severe_case = true
 	if infected:
 		infect()
 
-func initiate_movement():
-	$MoveTimer.wait_time = rand_range(5, 10)
-	apply_impulse(Vector2.ZERO, Vector2(rand_range(-100, 100), rand_range(-100, 100)))
+func _physics_process(delta):
+	move(delta)
 
-func _process(delta):
-	$Sprite.global_rotation_degrees = 0
+func move(delta):
+	var motion = get_motion(delta)
+	var collision = move_and_collide(motion)
+	if collision:
+		direction = -direction.reflect(collision.normal)
+		move(delta)
+		if collision.collider.is_in_group("node"):
+			transmit(collision.collider)
 
-func infect_other(other):
-	if infected and other is RigidBody2D:
+func get_motion(delta):
+	var velocity = direction * speed
+	return velocity * delta
+
+func transmit(other):
+	if infected and not other.infected:
 		other.infect()
+	elif not infected and other.infected:
+		infect()
 
 func infect():
 	if not immune:
