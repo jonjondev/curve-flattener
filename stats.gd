@@ -16,9 +16,8 @@ func update_stats():
 	current_infections = get_tree().get_nodes_in_group("infected").size()
 	current_immune = get_tree().get_nodes_in_group("immune").size()
 	total_population = get_tree().get_nodes_in_group("node").size()
-	
-	$Label.text = "Current Infections: " + str((float(current_infections) / float(total_population) * 100)) + "%"
 	$DaysLabel.text = "Days Passed: " + str(current_day)
+	$InfectionsLabel.text = "Current Infections: " + str(stepify((float(current_infections) / float(total_population) * 100), 0.01)) + "%"
 	
 	var new_infections_bar = bar_scene.instance()
 	new_infections_bar.rect_size = Vector2(rect_size.x, (rect_size.y/total_population)*current_infections)
