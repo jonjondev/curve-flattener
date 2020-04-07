@@ -6,15 +6,19 @@ var total_population = 0
 var current_infections = 0
 var current_immune = 0
 
+var current_day = 0
+
 func _ready():
 	$Timer.connect("timeout", self, "update_stats")
 
 func update_stats():
+	current_day += 1
 	current_infections = get_tree().get_nodes_in_group("infected").size()
 	current_immune = get_tree().get_nodes_in_group("immune").size()
 	total_population = get_tree().get_nodes_in_group("node").size()
 	
 	$Label.text = "Current Infections: " + str((float(current_infections) / float(total_population) * 100)) + "%"
+	$DaysLabel.text = "Days Passed: " + str(current_day)
 	
 	var new_infections_bar = bar_scene.instance()
 	new_infections_bar.rect_size = Vector2(rect_size.x, (rect_size.y/total_population)*current_infections)
