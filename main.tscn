@@ -79,11 +79,68 @@ position = Vector2( 354.166, 191.893 )
 [node name="Node10" parent="." instance=ExtResource( 1 )]
 position = Vector2( 406.968, 341.931 )
 
+[node name="Node89" parent="." instance=ExtResource( 1 )]
+position = Vector2( 65.5267, 247.77 )
+
+[node name="Node88" parent="." instance=ExtResource( 1 )]
+position = Vector2( 140.868, 227.164 )
+
+[node name="Node87" parent="." instance=ExtResource( 1 )]
+position = Vector2( 221.36, 157.618 )
+
+[node name="Node86" parent="." instance=ExtResource( 1 )]
+position = Vector2( 225.224, 76.4816 )
+
+[node name="Node92" parent="." instance=ExtResource( 1 )]
+position = Vector2( 48.5386, 186.571 )
+
+[node name="Node91" parent="." instance=ExtResource( 1 )]
+position = Vector2( 129.031, 117.025 )
+
+[node name="Node90" parent="." instance=ExtResource( 1 )]
+position = Vector2( 132.895, 35.8887 )
+
+[node name="Node85" parent="." instance=ExtResource( 1 )]
+position = Vector2( 278.026, 226.52 )
+
 [node name="Node19" parent="." instance=ExtResource( 1 )]
 position = Vector2( 811.906, 46.1211 )
 
 [node name="Node18" parent="." instance=ExtResource( 1 )]
 position = Vector2( 743.004, 136.272 )
+
+[node name="Node84" parent="." instance=ExtResource( 1 )]
+position = Vector2( 118.41, 365.873 )
+
+[node name="Node83" parent="." instance=ExtResource( 1 )]
+position = Vector2( 49.5081, 456.024 )
+
+[node name="Node82" parent="." instance=ExtResource( 1 )]
+position = Vector2( 127.425, 454.092 )
+
+[node name="Node81" parent="." instance=ExtResource( 1 )]
+position = Vector2( 164.129, 412.236 )
+
+[node name="Node80" parent="." instance=ExtResource( 1 )]
+position = Vector2( 72.6901, 552.615 )
+
+[node name="Node79" parent="." instance=ExtResource( 1 )]
+position = Vector2( 148.031, 532.009 )
+
+[node name="Node78" parent="." instance=ExtResource( 1 )]
+position = Vector2( 228.523, 462.463 )
+
+[node name="Node77" parent="." instance=ExtResource( 1 )]
+position = Vector2( 232.387, 381.327 )
+
+[node name="Node76" parent="." instance=ExtResource( 1 )]
+position = Vector2( 285.189, 531.365 )
+
+[node name="Node75" parent="." instance=ExtResource( 1 )]
+position = Vector2( 690.127, 235.555 )
+
+[node name="Node74" parent="." instance=ExtResource( 1 )]
+position = Vector2( 621.225, 325.706 )
 
 [node name="Node17" parent="." instance=ExtResource( 1 )]
 position = Vector2( 820.921, 134.34 )
@@ -267,3 +324,276 @@ position = Vector2( 373.083, 41.9574 )
 
 [node name="Node65" parent="." instance=ExtResource( 1 )]
 position = Vector2( 425.885, 191.995 )
+
+[node name="Node183" parent="." instance=ExtResource( 1 )]
+position = Vector2( 237.801, 198.725 )
+
+[node name="Node182" parent="." instance=ExtResource( 1 )]
+position = Vector2( 168.899, 288.876 )
+
+[node name="Node181" parent="." instance=ExtResource( 1 )]
+position = Vector2( 246.816, 286.944 )
+
+[node name="Node180" parent="." instance=ExtResource( 1 )]
+position = Vector2( 283.52, 245.088 )
+
+[node name="Node179" parent="." instance=ExtResource( 1 )]
+position = Vector2( 192.081, 385.467 )
+
+[node name="Node178" parent="." instance=ExtResource( 1 )]
+position = Vector2( 267.422, 364.861 )
+
+[node name="Node177" parent="." instance=ExtResource( 1 )]
+position = Vector2( 347.914, 295.315 )
+
+[node name="Node176" parent="." instance=ExtResource( 1 )]
+position = Vector2( 351.778, 214.179 )
+
+[node name="Node175" parent="." instance=ExtResource( 1 )]
+position = Vector2( 404.58, 364.217 )
+
+[node name="Node174" parent="." instance=ExtResource( 1 )]
+position = Vector2( 63.1389, 270.056 )
+
+[node name="Node173" parent="." instance=ExtResource( 1 )]
+position = Vector2( 138.48, 249.45 )
+
+[node name="Node172" parent="." instance=ExtResource( 1 )]
+position = Vector2( 218.972, 179.904 )
+
+[node name="Node171" parent="." instance=ExtResource( 1 )]
+position = Vector2( 222.836, 98.7679 )
+
+[node name="Node170" parent="." instance=ExtResource( 1 )]
+position = Vector2( 46.1508, 208.857 )
+
+[node name="Node169" parent="." instance=ExtResource( 1 )]
+position = Vector2( 126.643, 139.311 )
+
+[node name="Node168" parent="." instance=ExtResource( 1 )]
+position = Vector2( 130.507, 58.175 )
+
+[node name="Node167" parent="." instance=ExtResource( 1 )]
+position = Vector2( 275.638, 248.806 )
+
+[node name="Node166" parent="." instance=ExtResource( 1 )]
+position = Vector2( 809.518, 68.4074 )
+
+[node name="Node165" parent="." instance=ExtResource( 1 )]
+position = Vector2( 740.616, 158.558 )
+
+[node name="Node164" parent="." instance=ExtResource( 1 )]
+position = Vector2( 116.022, 388.159 )
+
+[node name="Node163" parent="." instance=ExtResource( 1 )]
+position = Vector2( 47.1203, 478.31 )
+
+[node name="Node162" parent="." instance=ExtResource( 1 )]
+position = Vector2( 125.037, 476.378 )
+
+[node name="Node161" parent="." instance=ExtResource( 1 )]
+position = Vector2( 161.741, 434.522 )
+
+[node name="Node160" parent="." instance=ExtResource( 1 )]
+position = Vector2( 70.3023, 574.901 )
+
+[node name="Node159" parent="." instance=ExtResource( 1 )]
+position = Vector2( 145.643, 554.295 )
+
+[node name="Node158" parent="." instance=ExtResource( 1 )]
+position = Vector2( 226.135, 484.749 )
+
+[node name="Node157" parent="." instance=ExtResource( 1 )]
+position = Vector2( 229.999, 403.613 )
+
+[node name="Node156" parent="." instance=ExtResource( 1 )]
+position = Vector2( 282.801, 553.651 )
+
+[node name="Node155" parent="." instance=ExtResource( 1 )]
+position = Vector2( 687.74, 257.841 )
+
+[node name="Node154" parent="." instance=ExtResource( 1 )]
+position = Vector2( 618.838, 347.992 )
+
+[node name="Node153" parent="." instance=ExtResource( 1 )]
+position = Vector2( 818.533, 156.626 )
+
+[node name="Node152" parent="." instance=ExtResource( 1 )]
+position = Vector2( 855.237, 114.77 )
+
+[node name="Node151" parent="." instance=ExtResource( 1 )]
+position = Vector2( 763.798, 255.149 )
+
+[node name="Node150" parent="." instance=ExtResource( 1 )]
+position = Vector2( 839.139, 234.543 )
+
+[node name="Node149" parent="." instance=ExtResource( 1 )]
+position = Vector2( 919.631, 164.997 )
+
+[node name="Node148" parent="." instance=ExtResource( 1 )]
+position = Vector2( 923.495, 83.8615 )
+
+[node name="Node147" parent="." instance=ExtResource( 1 )]
+position = Vector2( 976.298, 233.899 )
+
+[node name="Node146" parent="." instance=ExtResource( 1 )]
+position = Vector2( 505.443, 61.4011 )
+
+[node name="Node145" parent="." instance=ExtResource( 1 )]
+position = Vector2( 436.541, 151.552 )
+
+[node name="Node144" parent="." instance=ExtResource( 1 )]
+position = Vector2( 514.458, 149.62 )
+
+[node name="Node143" parent="." instance=ExtResource( 1 )]
+position = Vector2( 551.162, 107.764 )
+
+[node name="Node142" parent="." instance=ExtResource( 1 )]
+position = Vector2( 459.723, 248.143 )
+
+[node name="Node141" parent="." instance=ExtResource( 1 )]
+position = Vector2( 535.064, 227.537 )
+
+[node name="Node140" parent="." instance=ExtResource( 1 )]
+position = Vector2( 615.556, 157.991 )
+
+[node name="Node139" parent="." instance=ExtResource( 1 )]
+position = Vector2( 619.42, 76.8551 )
+
+[node name="Node138" parent="." instance=ExtResource( 1 )]
+position = Vector2( 672.222, 226.893 )
+
+[node name="Node137" parent="." instance=ExtResource( 1 )]
+position = Vector2( 804.614, 367.578 )
+
+[node name="Node136" parent="." instance=ExtResource( 1 )]
+position = Vector2( 735.712, 457.729 )
+
+[node name="Node135" parent="." instance=ExtResource( 1 )]
+position = Vector2( 813.629, 455.797 )
+
+[node name="Node134" parent="." instance=ExtResource( 1 )]
+position = Vector2( 850.333, 413.941 )
+
+[node name="Node133" parent="." instance=ExtResource( 1 )]
+position = Vector2( 758.894, 554.32 )
+
+[node name="Node132" parent="." instance=ExtResource( 1 )]
+position = Vector2( 834.235, 533.714 )
+
+[node name="Node131" parent="." instance=ExtResource( 1 )]
+position = Vector2( 914.727, 464.168 )
+
+[node name="Node130" parent="." instance=ExtResource( 1 )]
+position = Vector2( 918.591, 383.032 )
+
+[node name="Node129" parent="." instance=ExtResource( 1 )]
+position = Vector2( 971.393, 533.07 )
+
+[node name="Node128" parent="." instance=ExtResource( 1 )]
+position = Vector2( 595.124, 245.668 )
+
+[node name="Node127" parent="." instance=ExtResource( 1 )]
+position = Vector2( 526.223, 335.819 )
+
+[node name="Node126" parent="." instance=ExtResource( 1 )]
+position = Vector2( 604.14, 333.887 )
+
+[node name="Node125" parent="." instance=ExtResource( 1 )]
+position = Vector2( 640.843, 292.031 )
+
+[node name="Node124" parent="." instance=ExtResource( 1 )]
+position = Vector2( 549.404, 432.41 )
+
+[node name="Node123" parent="." instance=ExtResource( 1 )]
+position = Vector2( 624.745, 411.804 )
+
+[node name="Node122" parent="." instance=ExtResource( 1 )]
+position = Vector2( 705.237, 342.258 )
+
+[node name="Node121" parent="." instance=ExtResource( 1 )]
+position = Vector2( 709.101, 261.122 )
+
+[node name="Node120" parent="." instance=ExtResource( 1 )]
+position = Vector2( 761.903, 411.16 )
+
+[node name="Node119" parent="." instance=ExtResource( 1 )]
+position = Vector2( 345.699, 376.686 )
+
+[node name="Node118" parent="." instance=ExtResource( 1 )]
+position = Vector2( 276.797, 466.837 )
+
+[node name="Node117" parent="." instance=ExtResource( 1 )]
+position = Vector2( 354.714, 464.905 )
+
+[node name="Node116" parent="." instance=ExtResource( 1 )]
+position = Vector2( 391.418, 423.049 )
+
+[node name="Node115" parent="." instance=ExtResource( 1 )]
+position = Vector2( 299.979, 563.428 )
+
+[node name="Node114" parent="." instance=ExtResource( 1 )]
+position = Vector2( 375.32, 542.822 )
+
+[node name="Node113" parent="." instance=ExtResource( 1 )]
+position = Vector2( 455.812, 473.276 )
+
+[node name="Node112" parent="." instance=ExtResource( 1 )]
+position = Vector2( 459.676, 392.14 )
+
+[node name="Node111" parent="." instance=ExtResource( 1 )]
+position = Vector2( 512.478, 542.178 )
+
+[node name="Node110" parent="." instance=ExtResource( 1 )]
+position = Vector2( 553.787, 402.61 )
+
+[node name="Node109" parent="." instance=ExtResource( 1 )]
+position = Vector2( 484.885, 492.761 )
+
+[node name="Node108" parent="." instance=ExtResource( 1 )]
+position = Vector2( 562.802, 490.829 )
+
+[node name="Node107" parent="." instance=ExtResource( 1 )]
+position = Vector2( 599.506, 448.973 )
+
+[node name="Node106" parent="." instance=ExtResource( 1 )]
+position = Vector2( 508.067, 589.352 )
+
+[node name="Node105" parent="." instance=ExtResource( 1 )]
+position = Vector2( 583.408, 568.746 )
+
+[node name="Node104" parent="." instance=ExtResource( 1 )]
+position = Vector2( 663.9, 499.2 )
+
+[node name="Node103" parent="." instance=ExtResource( 1 )]
+position = Vector2( 667.764, 418.064 )
+
+[node name="Node102" parent="." instance=ExtResource( 1 )]
+position = Vector2( 720.566, 568.102 )
+
+[node name="Node101" parent="." instance=ExtResource( 1 )]
+position = Vector2( 256.718, 48.7897 )
+
+[node name="Node100" parent="." instance=ExtResource( 1 )]
+position = Vector2( 187.816, 138.941 )
+
+[node name="Node99" parent="." instance=ExtResource( 1 )]
+position = Vector2( 265.733, 137.009 )
+
+[node name="Node98" parent="." instance=ExtResource( 1 )]
+position = Vector2( 302.437, 95.1527 )
+
+[node name="Node97" parent="." instance=ExtResource( 1 )]
+position = Vector2( 210.998, 235.532 )
+
+[node name="Node96" parent="." instance=ExtResource( 1 )]
+position = Vector2( 286.339, 214.926 )
+
+[node name="Node95" parent="." instance=ExtResource( 1 )]
+position = Vector2( 366.831, 145.38 )
+
+[node name="Node94" parent="." instance=ExtResource( 1 )]
+position = Vector2( 370.695, 64.2437 )
+
+[node name="Node93" parent="." instance=ExtResource( 1 )]
+position = Vector2( 423.497, 214.282 )
