@@ -7,8 +7,10 @@ var direction
 export (bool) var infected
 var immune = false
 var is_severe_case = false
+var speed_reduction_timer
 
 func _ready():
+	$EffectTimer.connect("timeout", self, "increase_speed")
 	current_speed = full_speed
 	direction = Vector2(rand_range(-1, 1), rand_range(-1, 1))
 	if rand_range(1, 5) > 5:
@@ -51,3 +53,12 @@ func recover():
 	$Sprite.modulate = Color(0, 1, 0)
 	remove_from_group("infected")
 	add_to_group("immune")
+
+func reduce_speed(reduction_modifier, effect_time):
+	current_speed = full_speed / reduction_modifier
+	$EffectTimer.wait_time = effect_time
+	$EffectTimer.start()
+
+func increase_speed():
+	current_speed = full_speed
+	$EffectTimer.stop()

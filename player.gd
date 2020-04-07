@@ -17,8 +17,11 @@ func _input(event):
 				dragging = true
 			elif not event.pressed and dragging:
 				dragging = false
-				print(current_selection_box.get_overlapping_bodies())
+				var selected_nodes = current_selection_box.get_overlapping_bodies()
 				current_selection_box.queue_free()
+				for node in selected_nodes:
+					if node is KinematicBody2D:
+						node.reduce_speed(4, 5)
 
 func _process(delta):
 	if current_selection_box and dragging:
