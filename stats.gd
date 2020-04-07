@@ -45,3 +45,5 @@ func update_stats():
 		bar.rect_size = Vector2(new_width/2, bar.rect_size.y)
 		bar.rect_position = Vector2(new_width*i + (new_width/4), 0)
 	
+	if current_infections <= 0:
+		get_tree().paused = true
