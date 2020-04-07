@@ -1,13 +1,15 @@
 extends KinematicBody2D
 
-var speed = 100
+var full_speed = 100
+var current_speed
 var direction
 
 export (bool) var infected
-export (bool) var immune
+var immune = false
 var is_severe_case = false
 
 func _ready():
+	current_speed = full_speed
 	direction = Vector2(rand_range(-1, 1), rand_range(-1, 1))
 	if rand_range(1, 5) > 5:
 		is_severe_case = true
@@ -18,17 +20,14 @@ func _physics_process(delta):
 	move(delta)
 
 func move(delta):
-	var motion = get_motion(delta)
+	var velocity = direction * current_speed
+	var motion = velocity * delta
 	var collision = move_and_collide(motion)
 	if collision:
 		direction = -direction.reflect(collision.normal)
 		move(delta)
 		if collision.collider.is_in_group("node"):
 			transmit(collision.collider)
-
-func get_motion(delta):
-	var velocity = direction * speed
-	return velocity * delta
 
 func transmit(other):
 	if infected and not other.infected:

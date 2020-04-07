@@ -5,14 +5,32 @@ margin_left = 601.743
 margin_top = 109.069
 margin_right = 1006.74
 margin_bottom = 426.069
-color = Color( 0, 0, 0, 1 )
+color = Color( 0, 0, 0, 0.517647 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="."]
-margin_right = 40.0
-margin_bottom = 14.0
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_top = -34.0
+margin_right = 405.0
+color = Color( 0, 0, 0, 0.517647 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DaysLabel" type="Label" parent="."]
+margin_top = -34.0
+margin_right = 124.0
+margin_bottom = -20.0
+text = "Days Passed:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InfectionsLabel" type="Label" parent="."]
+margin_top = -17.8726
+margin_right = 124.074
+margin_bottom = -3.87255
 text = "Current Infections: "
 __meta__ = {
 "_edit_use_anchors_": false
