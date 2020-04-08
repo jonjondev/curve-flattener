@@ -5,6 +5,7 @@ var selection_box_scene = preload("res://selection_box.tscn")
 var dragging = false
 var start_position
 var current_selection_box
+var current_selection_intensity
 
 func _input(event):
 	if event is InputEventMouseButton:
@@ -25,4 +26,9 @@ func _input(event):
 
 func _process(delta):
 	if current_selection_box and dragging:
+		var decimal_percentage = 1 - 1/current_selection_intensity
+		current_selection_box.modulate = Color(1, decimal_percentage, decimal_percentage, 0.5)
 		current_selection_box.scale = get_viewport().get_mouse_position() - start_position
+
+func get_effect_intensity(box_scale_coordinates):
+	return (get_viewport().size.x * get_viewport().size.y) / abs(box_scale_coordinates.x * box_scale_coordinates.y)

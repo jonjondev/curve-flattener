@@ -8,11 +8,10 @@ extents = Vector2( 0.493958, 0.502777 )
 [node name="SelectionBox" type="Area2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2( 0.5, 0.5 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
-modulate = Color( 1, 1, 1, 0.196078 )
+position = Vector2( -0.0100985, 0 )
 texture = ExtResource( 1 )
 centered = false
