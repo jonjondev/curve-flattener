@@ -27,7 +27,6 @@ func move(delta):
 	var collision = move_and_collide(motion)
 	if collision:
 		direction = -direction.reflect(collision.normal)
-		move(delta)
 		if collision.collider.is_in_group("node"):
 			transmit(collision.collider)
 

@@ -22,10 +22,11 @@ func _input(event):
 				current_selection_box.queue_free()
 				for node in selected_nodes:
 					if node is KinematicBody2D:
-						node.reduce_speed(4, 5)
+						node.reduce_speed(current_selection_intensity, 14 * ((1/current_selection_intensity) * 2))
 
 func _process(delta):
 	if current_selection_box and dragging:
+		current_selection_intensity = get_effect_intensity(current_selection_box.scale)
 		var decimal_percentage = 1 - 1/current_selection_intensity
 		current_selection_box.modulate = Color(1, decimal_percentage, decimal_percentage, 0.5)
 		current_selection_box.scale = get_viewport().get_mouse_position() - start_position
