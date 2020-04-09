@@ -15,7 +15,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="transmission"
+config/name="Curve Flattener"
 run/main_scene="res://scenes/main.tscn"
 config/icon="res://icon.png"
 
