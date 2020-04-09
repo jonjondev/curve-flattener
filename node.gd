@@ -50,7 +50,8 @@ func recover():
 	infected = false
 	immune = true
 	$Sprite.modulate = Color(0, 1, 0)
-	remove_from_group("infected")
+	if is_in_group("infected"):
+		remove_from_group("infected")
 	add_to_group("immune")
 
 func reduce_speed(reduction_modifier, effect_time):
