@@ -7,6 +7,15 @@ var start_position
 var current_selection_box
 var current_selection_intensity
 
+func _ready():
+	var all_nodes = get_tree().get_nodes_in_group("node")
+	all_nodes[rand_range(0, all_nodes.size())].infect()
+	get_tree().create_timer(3).connect("timeout", self, "infect_random")
+
+func infect_random():
+	var all_nodes = get_tree().get_nodes_in_group("node")
+	all_nodes[rand_range(0, all_nodes.size())].infect()
+
 func _input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == BUTTON_LEFT:

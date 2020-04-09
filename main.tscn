@@ -50,7 +50,6 @@ shape = SubResource( 2 )
 
 [node name="Node" parent="." instance=ExtResource( 1 )]
 position = Vector2( 156.477, 179.015 )
-infected = true
 
 [node name="Node2" parent="." instance=ExtResource( 1 )]
 position = Vector2( 240.189, 176.439 )
