@@ -48,6 +48,7 @@ func _input(event):
 						node.reduce_speed(current_selection_intensity, 14 * ((1/current_selection_intensity) * 2))
 			else:
 				current_selection_line.get_node("StaticBody2D/CollisionPolygon2D").polygon = current_selection_line.points
+				current_selection_line.set_time_alive(7.0 * (1 - current_selection_intensity))
 
 func _process(delta):
 	if dragging:
@@ -58,6 +59,10 @@ func _process(delta):
 			current_selection_box.scale = get_viewport().get_mouse_position() - start_position
 		elif current_selection_line and tool_mode == Mode.BARRIER:
 			current_selection_line.points[1] = get_viewport().get_mouse_position() - current_selection_line.position
+			current_selection_intensity = get_line_intensity(current_selection_line.points)
 
 func get_effect_intensity(box_scale_coordinates):
 	return (get_viewport().size.x * get_viewport().size.y) / abs(box_scale_coordinates.x * box_scale_coordinates.y)
+
+func get_line_intensity(points):
+	return points[0].distance_to(points[1]) / Vector2(get_viewport().size.x, 0).distance_to(Vector2(0, get_viewport().size.y))
