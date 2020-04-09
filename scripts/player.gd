@@ -2,8 +2,8 @@ extends Node
 
 enum Mode {SLOW, BARRIER}
 
-var selection_box_scene = preload("res://selection_box.tscn")
-var barrier_scene = preload("res://barrier.tscn")
+var selection_box_scene = preload("res://scenes/selection_box.tscn")
+var barrier_scene = preload("res://scenes/barrier.tscn")
 
 var all_nodes
 var tool_mode = Mode.BARRIER

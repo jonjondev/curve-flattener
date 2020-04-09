@@ -1,6 +1,6 @@
 extends ColorRect
 
-var bar_scene = preload("res://bar.tscn")
+var bar_scene = preload("res://scenes/bar.tscn")
 
 var total_population = 0
 var current_infections = 0

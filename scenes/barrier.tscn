@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://barrier.gd" type="Script" id=1]
+[ext_resource path="res://scripts/barrier.gd" type="Script" id=1]
 
 [node name="Barrier" type="Line2D"]
 points = PoolVector2Array( 0, 0 )

@@ -16,12 +16,12 @@ _global_script_class_icons={
 [application]
 
 config/name="transmission"
-run/main_scene="res://main.tscn"
+run/main_scene="res://scenes/main.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
-Player="*res://player.gd"
+Player="*res://scripts/player.gd"
 
 [display]
 
