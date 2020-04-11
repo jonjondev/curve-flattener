@@ -1,0 +1,14 @@
+[gd_scene format=2]
+
+[node name="CursorTooltip" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+anchor_bottom = 10.0
+margin_top = -25.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "tool name"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
