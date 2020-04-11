@@ -6,7 +6,7 @@ var selection_box_scene = preload("res://scenes/selection_box.tscn")
 var barrier_scene = preload("res://scenes/barrier.tscn")
 
 var all_nodes
-var tool_mode = Mode.BARRIER
+var tool_mode = Mode.SLOW
 var dragging = false
 var start_position
 var current_selection_object
@@ -24,6 +24,7 @@ func _input(event):
 	if event is InputEventKey and event.pressed and event.scancode == KEY_SPACE:
 		current_selection_object = null
 		tool_mode = (tool_mode + 1)%2
+		Cursor.on_tool_change(tool_mode)
 	elif event is InputEventMouseButton and event.button_index == BUTTON_LEFT:
 		if event.pressed and not dragging:
 			start_position = get_viewport().get_mouse_position()
