@@ -1,5 +1,7 @@
 extends Node
 
+signal on_tool_change
+
 enum Mode {SLOW, BARRIER}
 
 var selection_box_scene = preload("res://scenes/selection_box.tscn")
@@ -24,7 +26,7 @@ func _input(event):
 	if event is InputEventKey and event.pressed and event.scancode == KEY_SPACE:
 		current_selection_object = null
 		tool_mode = (tool_mode + 1)%2
-		Cursor.on_tool_change(tool_mode)
+		emit_signal("on_tool_change")
 	elif event is InputEventMouseButton and event.button_index == BUTTON_LEFT:
 		if event.pressed and not dragging:
 			start_position = get_viewport().get_mouse_position()
