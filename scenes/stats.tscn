@@ -1,40 +1,54 @@
-[gd_scene format=2]
+[gd_scene load_steps=3 format=2]
 
-[node name="Stats" type="ColorRect"]
-margin_left = 601.743
-margin_top = 109.069
-margin_right = 1006.74
-margin_bottom = 426.069
+[ext_resource path="res://fonts/stats_font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://scripts/stats.gd" type="Script" id=2]
+
+[node name="Stats" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Info" type="ColorRect" parent="."]
+anchor_left = 0.75
+anchor_right = 1.0
+anchor_bottom = 0.06
 color = Color( 0, 0, 0, 0.517647 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ColorRect" type="ColorRect" parent="."]
-margin_top = -34.0
-margin_right = 405.0
-color = Color( 0, 0, 0, 0.517647 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="DaysLabel" type="Label" parent="."]
-margin_top = -34.0
-margin_right = 124.0
-margin_bottom = -20.0
-text = "Days Passed:"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="InfectionsLabel" type="Label" parent="."]
-margin_top = -17.8726
-margin_right = 124.074
-margin_bottom = -3.87255
+[node name="InfectionsLabel" type="Label" parent="Info"]
+anchor_right = 1.0
+anchor_bottom = 0.5
+custom_fonts/font = ExtResource( 1 )
 text = "Current Infections: "
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Timer" type="Timer" parent="."]
+[node name="DaysLabel" type="Label" parent="Info"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = 0.079998
+custom_fonts/font = ExtResource( 1 )
+text = "Days Passed:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Graph" type="ColorRect" parent="."]
+anchor_left = 0.75
+anchor_top = 0.06
+anchor_right = 1.0
+anchor_bottom = 0.35
+color = Color( 0, 0, 0, 0.517647 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="Graph"]
 autostart = true

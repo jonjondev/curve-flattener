@@ -1,7 +1,6 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scenes/node.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scripts/stats.gd" type="Script" id=2]
 [ext_resource path="res://scenes/stats.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/cursor_tooltip.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scripts/cursor.gd" type="Script" id=5]
@@ -17,14 +16,9 @@ extents = Vector2( 10, 300 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Stats" parent="CanvasLayer" instance=ExtResource( 3 )]
-margin_left = 828.0
-margin_top = 37.0
-margin_right = 1023.0
-margin_bottom = 170.0
-script = ExtResource( 2 )
-
 [node name="CursorTooltip" parent="CanvasLayer" instance=ExtResource( 4 )]
+
+[node name="Stats" parent="CanvasLayer" instance=ExtResource( 3 )]
 
 [node name="Bounds" type="StaticBody2D" parent="."]
 
