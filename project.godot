@@ -19,11 +19,6 @@ config/name="Curve Flattener"
 run/main_scene="res://scenes/main.tscn"
 config/icon="res://icon.png"
 
-[autoload]
-
-Player="*res://scripts/player.gd"
-Cursor="*res://scripts/cursor.gd"
-
 [display]
 
 mouse_cursor/custom_image="res://sprites/cursor_white.png"
