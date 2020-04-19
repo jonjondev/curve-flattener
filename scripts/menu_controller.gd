@@ -1,10 +1,7 @@
 extends Control
 
 func _ready():
-	$PlayButton.connect("button_up", self, "play")
-
-func play():
-	get_tree().change_scene("res://scenes/main.tscn")
+	$PlayButton.connect("button_up", SceneManager, "start_game")
 
 func _input(event):
 	if event is InputEventKey and event.scancode == KEY_SPACE:
