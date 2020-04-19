@@ -1,11 +1,11 @@
 extends Node
 
-var stats_node
+var graph
 
 func start_game():
 	get_tree().change_scene("res://scenes/main.tscn")
 
-func end_game(stats_node):
-	stats_node.get_parent().remove_child(stats_node)
-	self.stats_node = stats_node
+func end_game(stats):
+	graph = stats.get_node("Graph")
+	stats.remove_child(graph)
 	get_tree().change_scene("res://scenes/game_over.tscn")
