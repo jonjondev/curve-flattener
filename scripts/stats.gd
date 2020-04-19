@@ -46,4 +46,5 @@ func update_stats():
 		bar.rect_position = Vector2(new_width*i + (new_width/4), 0)
 	
 	if current_infections <= 0:
-		get_tree().paused = true
+		SceneManager.end_game(get_parent())
+		$Timer.stop()
