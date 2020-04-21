@@ -11,8 +11,9 @@ func _ready():
 	
 	var viewport_size = get_viewport().size
 	var img = get_viewport().get_texture().get_data()
+	img.crop($CapturePanel.rect_position.x + $CapturePanel.get_size().x, img.get_size().y - $CapturePanel.rect_position.y)
 	img.flip_y()
 	img.flip_x()
-	img.crop(viewport_size.x/2, viewport_size.y)
+	img.crop(img.get_size().x - $CapturePanel.rect_position.x, $CapturePanel.get_size().y)
 	img.flip_x()
 	img.save_png("user://screenshot.png")
