@@ -8,6 +8,9 @@ var current_immune = 0
 
 var current_day = 0
 
+var peak_infection_rate = 0
+var total_uninfected
+
 func _ready():
 	$Timer.connect("timeout", self, "update_stats")
 
@@ -16,8 +19,13 @@ func update_stats():
 	current_infections = get_tree().get_nodes_in_group("infected").size()
 	current_immune = get_tree().get_nodes_in_group("immune").size()
 	total_population = get_tree().get_nodes_in_group("node").size()
+	
+	var infection_rate = stepify((float(current_infections) / float(total_population) * 100), 0.01)
+	if infection_rate > peak_infection_rate:
+		peak_infection_rate = infection_rate
+	
 	$"../Info/DaysLabel".text = "Days Passed: " + str(current_day)
-	$"../Info/InfectionsLabel".text = "Current Infections: " + str(stepify((float(current_infections) / float(total_population) * 100), 0.01)) + "%"
+	$"../Info/InfectionsLabel".text = "Current Infections: " + str(infection_rate) + "%"
 	
 	var new_infections_bar = bar_scene.instance()
 	new_infections_bar.rect_size = Vector2(rect_size.x, (rect_size.y/total_population)*current_infections)
@@ -46,5 +54,6 @@ func update_stats():
 		bar.rect_position = Vector2(new_width*i + (new_width/4), 0)
 	
 	if current_infections <= 0:
+		total_uninfected = stepify((float(total_population - current_immune) / float(total_population) * 100), 0.01)
 		SceneManager.end_game(get_parent())
 		$Timer.stop()

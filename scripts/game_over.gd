@@ -7,6 +7,8 @@ func _ready():
 	$Graph.anchor_right = 0.9
 	$Graph.anchor_bottom = 0.9
 	
+	$CanvasLayer/Label.text = "Peak Infected: " + str($Graph.peak_infection_rate) + "%\nPopulation Uninfected: " + str($Graph.total_uninfected) + "%\nDays Since First Case: " + str($Graph.current_day)
+	
 	yield(VisualServer, 'frame_post_draw')
 	
 	var viewport_size = get_viewport().size
