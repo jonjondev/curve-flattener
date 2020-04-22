@@ -3,11 +3,12 @@ extends Control
 func _ready():
 	add_child(SceneManager.graph)
 	$Graph.anchor_left = 0.625
-	$Graph.anchor_top = 0.1
+	$Graph.anchor_top = 0.2
 	$Graph.anchor_right = 0.9
-	$Graph.anchor_bottom = 0.9
+	$Graph.anchor_bottom = 0.49
 	
-	$CanvasLayer/Label.text = "Peak Infected: " + str($Graph.peak_infection_rate) + "%\nPopulation Uninfected: " + str($Graph.total_uninfected) + "%\nDays Since First Case: " + str($Graph.current_day)
+	
+	$StatsLabel.text = "Peak Infected: " + str($Graph.peak_infection_rate) + "%\nPopulation Uninfected: " + str($Graph.total_uninfected) + "%\nDays Since First Case: " + str($Graph.current_day)
 	
 	yield(VisualServer, 'frame_post_draw')
 	
