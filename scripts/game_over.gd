@@ -1,5 +1,7 @@
 extends Control
 
+var link = "jonathanmoallem.com/curve-flattener"
+
 func _ready():
 	add_child(SceneManager.graph)
 	$Graph.anchor_left = 0.625
@@ -7,8 +9,10 @@ func _ready():
 	$Graph.anchor_right = 0.9
 	$Graph.anchor_bottom = 0.49
 	
+	$PlayButton.connect("button_up", SceneManager, "start_game")
 	
 	$StatsLabel.text = "Peak Infected: " + str($Graph.peak_infection_rate) + "%\nPopulation Uninfected: " + str($Graph.total_uninfected) + "%\nDays Since First Case: " + str($Graph.current_day)
+	$LinkLabel.text = "play Curve Flattener now at:\n" + link
 	
 	yield(VisualServer, 'frame_post_draw')
 	

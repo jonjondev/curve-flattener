@@ -1,14 +1,37 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scripts/game_over.gd" type="Script" id=1]
 [ext_resource path="res://resources/ui_theme.tres" type="Theme" id=2]
 [ext_resource path="res://fonts/DroidSans-Bold.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://fonts/DroidSans.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=2]
+size = 32
+font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=1]
 size = 18
 extra_spacing_top = 5
 extra_spacing_bottom = 5
 font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 12
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 56
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 38
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=7]
+font_data = ExtResource( 4 )
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -31,7 +54,7 @@ __meta__ = {
 anchor_left = 0.575
 anchor_top = 0.05
 anchor_right = 0.925
-anchor_bottom = 0.6
+anchor_bottom = 0.78
 color = Color( 0, 0, 0, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -39,27 +62,115 @@ __meta__ = {
 
 [node name="GraphFrame" type="ColorRect" parent="."]
 anchor_left = 0.625
-anchor_top = 0.1
+anchor_top = 0.2
 anchor_right = 0.875
-anchor_bottom = 0.39
+anchor_bottom = 0.49
 color = Color( 0, 0, 0, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-layer = 2
-
-[node name="Label" type="Label" parent="CanvasLayer"]
+[node name="StatsTitleLabel" type="Label" parent="."]
 anchor_left = 0.6
-anchor_top = 0.4
+anchor_top = 0.07
 anchor_right = 0.9
-anchor_bottom = 0.6
+anchor_bottom = 0.18
+custom_fonts/font = SubResource( 2 )
+text = "Curve Flattener"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StatsLabel" type="Label" parent="."]
+anchor_left = 0.6
+anchor_top = 0.5
+anchor_right = 0.9
+anchor_bottom = 0.7
 custom_fonts/font = SubResource( 1 )
 text = "Peak Infected: 00.00%
 Population Uninfected: 00.00%
 Days Since First Case: 00"
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LinkLabel" type="Label" parent="."]
+anchor_left = 0.6
+anchor_top = 0.68
+anchor_right = 0.9
+anchor_bottom = 0.78
+custom_fonts/font = SubResource( 3 )
+text = "play Curve Flattener now at:
+ jonathanmoallem.com/curve-flattener"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FacebookButton" type="Button" parent="."]
+anchor_left = 0.575
+anchor_top = 0.8
+anchor_right = 0.74
+anchor_bottom = 0.9
+custom_fonts/font = SubResource( 4 )
+text = "Share to Facebook"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TwitterButton" type="Button" parent="."]
+anchor_left = 0.76
+anchor_top = 0.8
+anchor_right = 0.925
+anchor_bottom = 0.9
+custom_fonts/font = SubResource( 4 )
+text = "Share to Twitter"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayButton" type="Button" parent="."]
+anchor_left = 0.1
+anchor_top = 0.65
+anchor_right = 0.4
+anchor_bottom = 0.85
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = SubResource( 5 )
+text = "Play Again"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GameOverLabel" type="Label" parent="."]
+anchor_left = 0.000445306
+anchor_top = 0.1
+anchor_right = 0.500445
+anchor_bottom = 0.2
+custom_fonts/font = SubResource( 6 )
+text = "Outbreak Neutralised!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IntroLabel" type="Label" parent="."]
+anchor_left = 0.07
+anchor_top = 0.21
+anchor_right = 0.43
+anchor_bottom = 0.62076
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = SubResource( 7 )
+text = "Thanks for playing - I really hope that being able to mess around with something like the tools they use to model outbreaks can help put some things into perspective.
+
+Feel free to keep trying to flatten that curve, and if you found this at all interesting, please go ahead and share your results on Facebook and Twitter to help spread the knowlege! So stay safe and keep up that social distance just a little bit longer - it'll be worth it."
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
