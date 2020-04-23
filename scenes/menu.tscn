@@ -12,11 +12,11 @@
 size = 52
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=2]
 size = 56
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=7]
+[sub_resource type="DynamicFont" id=3]
 font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=4]
@@ -80,7 +80,7 @@ anchor_right = 0.4
 anchor_bottom = 0.85
 grow_horizontal = 2
 grow_vertical = 2
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 2 )
 text = "Play"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -93,7 +93,7 @@ anchor_right = 0.95
 anchor_bottom = 0.16
 grow_horizontal = 2
 grow_vertical = 2
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 3 )
 text = "Curve Flattener is a short game I made about statistics and modelling in epidemiology to help people better understand the effects of social distancing and quarantine."
 autowrap = true
 __meta__ = {
@@ -107,7 +107,7 @@ anchor_right = 0.95
 anchor_bottom = 0.35
 grow_horizontal = 2
 grow_vertical = 2
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 3 )
 text = "I hope that the gamification of the concept will assist people in wrapping their heads around the logic being used to make the decisions of governments around the world right now, as well as what we as individuals can be doing in our daily lives to help combat the spread of COVID-19."
 autowrap = true
 __meta__ = {
@@ -138,7 +138,7 @@ anchor_right = 0.95
 anchor_bottom = 0.57
 grow_horizontal = 2
 grow_vertical = 2
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 3 )
 text = "Press [spacebar] to switch tools."
 autowrap = true
 __meta__ = {
@@ -152,7 +152,7 @@ anchor_right = 0.95
 anchor_bottom = 0.81
 grow_horizontal = 2
 grow_vertical = 2
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 3 )
 text = "Tips:"
 autowrap = true
 __meta__ = {
@@ -194,7 +194,7 @@ margin_right = -0.271606
 margin_bottom = 21.0
 grow_horizontal = 2
 grow_vertical = 2
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 3 )
 text = "Social Distance - click and drag the left mouse button to draw a social distancing area"
 autowrap = true
 __meta__ = {
@@ -208,7 +208,7 @@ anchor_right = 0.95
 anchor_bottom = 0.73
 grow_horizontal = 2
 grow_vertical = 2
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 3 )
 text = "Quarantine - click and drag the left mouse button to draw a quarantine border line"
 autowrap = true
 __meta__ = {
@@ -223,7 +223,7 @@ anchor_bottom = 0.84
 margin_top = -3.5
 margin_bottom = 59.5
 grow_horizontal = 2
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 3 )
 text = "- Shorter quarantine borders stay active for longer
 - Smaller distancing areas are more effective, but stay active for shorter periods of time"
 autowrap = true
