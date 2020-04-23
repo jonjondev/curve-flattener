@@ -1,6 +1,8 @@
 extends Control
 
 var site_link = "jonathanmoallem.com/curve-flattener"
+var current_share
+var img_link
 
 func _ready():
 	add_child(SceneManager.graph)
@@ -18,7 +20,7 @@ func _ready():
 	
 	yield(VisualServer, 'frame_post_draw')
 
-func share_result(sharer_url):
+func upload_image():
 	var viewport_size = get_viewport().size
 	var img = get_viewport().get_texture().get_data()
 	img.crop($CapturePanel.rect_position.x + $CapturePanel.get_size().x, img.get_size().y - $CapturePanel.rect_position.y)
@@ -28,4 +30,18 @@ func share_result(sharer_url):
 	img.flip_x()
 	img.save_png("user://screenshot.png")
 	
-	OS.shell_open(sharer_url + "http://" + site_link)
+	$HTTPRequest.connect("request_completed", self, "_http_request_completed")
+	var body = JSON.print({"title": "An image", "image": "https://jonathanmoallem.com/games-portfolio/me.png"})
+	var error = $HTTPRequest.request("https://api.imgur.com/3/image", ["Authorization: Client-ID 41491c19309863b", "Content-Type: application/json"], false, HTTPClient.METHOD_POST, body)
+
+func _http_request_completed(result, response_code, headers, body):
+	print(parse_json(body.get_string_from_utf8()))
+	img_link = parse_json(body.get_string_from_utf8())["data"]["link"]
+	share_result(current_share)
+
+func share_result(sharer_url):
+	current_share = sharer_url
+	if img_link:
+		OS.shell_open(sharer_url + img_link)
+	else:
+		upload_image()
