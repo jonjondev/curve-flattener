@@ -28,10 +28,14 @@ func upload_image():
 	img.flip_x()
 	img.crop(img.get_size().x - $CapturePanel.rect_position.x, $CapturePanel.get_size().y)
 	img.flip_x()
-	img.save_png("user://screenshot.png")
+	img.save_png("user://results.png")
+	
+	var file = File.new()
+	file.open("user://results.png", File.READ)
+	var base_64_data = Marshalls.raw_to_base64(file.get_buffer(file.get_len()))
 	
 	$HTTPRequest.connect("request_completed", self, "_http_request_completed")
-	var body = JSON.print({"title": "An image", "image": "https://jonathanmoallem.com/games-portfolio/me.png"})
+	var body = JSON.print({"title": "My Latest Score on Curve Flattener", "image": base_64_data, "type": "base64", "description": "Play #CurveFlattener now at http://" + site_link})
 	var error = $HTTPRequest.request("https://api.imgur.com/3/image", ["Authorization: Client-ID 41491c19309863b", "Content-Type: application/json"], false, HTTPClient.METHOD_POST, body)
 
 func _http_request_completed(result, response_code, headers, body):
