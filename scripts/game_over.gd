@@ -6,10 +6,10 @@ var img_link
 
 func _ready():
 	add_child(SceneManager.graph)
-	$Graph.anchor_left = 0.625
-	$Graph.anchor_top = 0.2
-	$Graph.anchor_right = 0.9
-	$Graph.anchor_bottom = 0.49
+	$Graph.anchor_left = 0.52
+	$Graph.anchor_top = 0.1
+	$Graph.anchor_right = 0.77
+	$Graph.anchor_bottom = 0.39
 	
 	$PlayButton.connect("button_up", SceneManager, "start_game")
 	$FacebookButton.connect("button_up", self, "share_result", ["https://www.facebook.com/sharer/sharer.php?u="])
@@ -17,18 +17,17 @@ func _ready():
 	
 	$StatsLabel.text = "Peak Infected: " + str($Graph.peak_infection_rate) + "%\nPopulation Uninfected: " + str($Graph.total_uninfected) + "%\nDays Since First Case: " + str($Graph.current_day)
 	$LinkLabel.text = "play Curve Flattener now at:\n" + site_link
-	
-	yield(VisualServer, 'frame_post_draw')
 
 func upload_image():
-	var viewport_size = get_viewport().size
+	toggle_screenshot_items()
+	yield(VisualServer, 'frame_post_draw')
 	var img = get_viewport().get_texture().get_data()
-	img.crop($CapturePanel.rect_position.x + $CapturePanel.get_size().x, img.get_size().y - $CapturePanel.rect_position.y)
 	img.flip_y()
 	img.flip_x()
-	img.crop(img.get_size().x - $CapturePanel.rect_position.x, $CapturePanel.get_size().y)
+	img.crop(img.get_size().x/2, img.get_size().y/2)
 	img.flip_x()
 	img.save_png("user://results.png")
+	toggle_screenshot_items()
 	
 	var file = File.new()
 	file.open("user://results.png", File.READ)
@@ -49,3 +48,7 @@ func share_result(sharer_url):
 		OS.shell_open(sharer_url + img_link)
 	else:
 		upload_image()
+
+func toggle_screenshot_items():
+	$StatsTitleLabel.visible = !$StatsTitleLabel.visible
+	$LinkLabel.visible = !$LinkLabel.visible
