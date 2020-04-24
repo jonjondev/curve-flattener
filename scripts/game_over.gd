@@ -13,7 +13,7 @@ func _ready():
 	
 	$PlayButton.connect("button_up", SceneManager, "start_game")
 	$FacebookButton.connect("button_up", self, "share_result", ["https://www.facebook.com/sharer/sharer.php?u="])
-	$TwitterButton.connect("button_up", self, "share_result", ["https://twitter.com/share?text=Check out my score in #CurveFlattener&url="])
+	$TwitterButton.connect("button_up", self, "share_result", ["https://twitter.com/share?text=Check out my score in %23CurveFlattener&url="])
 	
 	$StatsLabel.text = "Peak Infected: " + str($Graph.peak_infection_rate) + "%\nPopulation Uninfected: " + str($Graph.total_uninfected) + "%\nDays Since First Case: " + str($Graph.current_day)
 	$LinkLabel.text = "play Curve Flattener now at:\n" + site_link
